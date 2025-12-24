@@ -18,9 +18,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-sky-100 text-sky-100">
     <%= render 'shared/header' %>
-    <main class="container mx-auto my-2">
+    <%= render 'shared/flash_message' %>
+    <main class="container mx-auto">
       <%= yield %>
     </main>
   </body>

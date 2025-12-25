@@ -24,5 +24,11 @@ module App
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.default_locale = :ja
+
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+      g.request_specs false
+    end
   end
 end

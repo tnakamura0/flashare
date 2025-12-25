@@ -19,7 +19,11 @@
   </head>
 
   <body class="bg-sky-100 text-sky-100">
-    <%= render 'shared/header' %>
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
     <%= render 'shared/flash_message' %>
     <main class="container mx-auto">
       <%= yield %>

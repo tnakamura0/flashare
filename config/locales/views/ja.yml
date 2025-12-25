@@ -1,0 +1,42 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+    label:
+      email: メールアドレス
+      password: パスワード
+      password_confirmation: パスワード確認
+  defaults:
+    create: 作成
+    search_word: 検索ワード
+    edit: 編集
+    show: 詳細
+    delete: 削除
+    delete_confirm: 削除しますか？
+    flash_message:
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成出来ませんでした"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新出来ませんでした"
+      deleted: "%{item}を削除しました"
+      require_login: ログインしてください
+      not_authorized: 権限がありません
+  user_sessions:
+    new:
+      title: ログイン
+      login: ログイン
+      to_register_page: 新規登録はこちら
+  users:
+    new:
+      title: ユーザー登録
+      to_login_page: 登録済みの方はこちら
+  header:
+    signup: 新規登録
+    login: ログイン
+    logout: ログアウト
+    home: ホーム
+    card: カード
+    deck: デッキ
+    quiz: クイズ

@@ -12,14 +12,16 @@ RSpec.describe "Users", type: :system do
 
   context '入力情報正常系' do
     it 'ユーザーが新規作成できること' do
-      expect(User.count).to eq 1
-      visit '/users/new'
-      fill_in 'ユーザー名', with: 'らんてくん'
-      fill_in 'メールアドレス', with: 'example@example.com'
-      fill_in 'パスワード', with: '12345678'
-      fill_in 'パスワード確認', with: '12345678'
-      click_button '登録'
-      expect(User.count).to eq 2
+      # 現在のユーザー数を記録(環境に依存しない)
+      expect {
+        visit '/users/new'
+        fill_in 'ユーザー名', with: 'らんてくん'
+        fill_in 'メールアドレス', with: 'example@example.com'
+        fill_in 'パスワード', with: '12345678'
+        fill_in 'パスワード確認', with: '12345678'
+        click_button '登録'
+      }.to change(User, :count).by(1)  # 1件増えたことを確認
+
       expect(page).to have_content('ユーザー登録が完了しました')
     end
   end

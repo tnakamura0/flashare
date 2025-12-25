@@ -2,21 +2,21 @@
   <h1 class="text-3xl">
     <%= link_to "Flashare", root_path %>
   </h1>
+  <div class="flex items-center gap-12">
   <ul class="flex items-center gap-4">
     <li>
-      <%= link_to "ホーム", root_path %>
+      <%= link_to t('header.home'), root_path %>
     </li>
     <li>
-      <%= link_to "単語", "#" %>
+      <%= link_to t('header.card'), "#" %>
     </li>
     <li>
-      <%= link_to "マイセット", "#" %>
+      <%= link_to t('header.deck'), "#" %>
     </li>
     <li>
-      <%= link_to "Start", "#" %>
-    </li>
-    <li>
-      <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete } %>
+      <%= link_to t('header.quiz'), "#" %>
     </li>
   </ul>
+  <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>
+  </div>
 </header>

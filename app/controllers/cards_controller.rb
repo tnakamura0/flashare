@@ -35,6 +35,12 @@ class CardsController < ApplicationController
     end
   end
 
+  def destroy
+    card = current_user.cards.find(params[:id])
+    card.destroy!
+    redirect_to cards_path, status: :see_other, notice: t("defaults.flash_message.deleted", item: Card.model_name.human)
+  end
+
   private
 
   def card_params

@@ -7,6 +7,6 @@
   <div class="mt-auto text-right">
     <%= link_to t("defaults.edit"), edit_card_path(card), class: "border-b border-dashed" %>
     <span class="mx-1">|</span>
-    <button class="border-b border-dashed"><%= t("defaults.delete") %></button>
+    <%= link_to t("defaults.delete"), card_path(card), class: "border-b border-dashed", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } %>
   </div>
 </div>

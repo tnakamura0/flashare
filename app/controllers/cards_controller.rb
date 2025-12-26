@@ -17,6 +17,10 @@ class CardsController < ApplicationController
     end
   end
 
+  def show
+    @card = current_user.cards.find(params[:id])
+  end
+
   def edit
     @card = current_user.cards.find(params[:id])
   end

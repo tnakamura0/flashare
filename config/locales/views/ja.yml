@@ -43,6 +43,7 @@ ja:
   cards:
     index:
       title: カード一覧
+      to_create_card_page: カードを作成する
       no_card_message: こちらからカードを作成しましょう！
     new:
       title: カード作成

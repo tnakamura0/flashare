@@ -40,6 +40,17 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+  cards:
+    index:
+      title: カード一覧
+      to_create_card_page: カードを作成する
+      no_card_message: こちらからカードを作成しましょう！
+    new:
+      title: カード作成
+    show:
+      title: カード詳細
+    edit:
+      title: カード編集
   header:
     signup: 新規登録
     login: ログイン

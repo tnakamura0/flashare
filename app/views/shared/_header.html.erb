@@ -1,22 +1,22 @@
 <header class="flex justify-between p-4 bg-cyan-600">
-  <h1 class="text-3xl">
+  <h1 class="text-2xl lg:text-3xl">
     <%= link_to "Flashare", root_path %>
   </h1>
-  <div class="flex items-center gap-12">
-  <ul class="flex items-center gap-4">
-    <li>
-      <%= link_to t('header.home'), root_path %>
-    </li>
-    <li>
-      <%= link_to t('header.card'), "#" %>
-    </li>
-    <li>
-      <%= link_to t('header.deck'), "#" %>
-    </li>
-    <li>
-      <%= link_to t('header.quiz'), "#" %>
-    </li>
-  </ul>
-  <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>
+  <div class="hidden md:flex items-center gap-12">
+    <ul class="flex items-center gap-4">
+      <li>
+        <%= link_to t('header.home'), root_path %>
+      </li>
+      <li>
+        <%= link_to t('header.card'), cards_path %>
+      </li>
+      <li>
+        <%= link_to t('header.deck'), "#" %>
+      </li>
+      <li>
+        <%= link_to t('header.quiz'), "#" %>
+      </li>
+    </ul>
+    <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>
   </div>
 </header>

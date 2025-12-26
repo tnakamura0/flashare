@@ -1,0 +1,16 @@
+<% content_for(:title, t(".title")) %>
+<div class="text-cyan-600">
+  <h1 class="font-bold text-4xl mt-4"><%= t(".title") %></h1>
+  <div>
+    <% if @cards.present? %>
+      <%= link_to t(".to_create_card_page"), new_card_path, class: "border-b-1 border-dashed" %>
+      <div class="flex flex-wrap md:gap-1">
+        <% @cards.each do |card| %>
+          <%= render 'card', card: card, card_classes: "w-11/24 md:w-3/12 lg:w-2/12" %>
+        <% end %>
+      </div>
+    <% else %>
+      <%= link_to t(".no_card_message"), new_card_path, class: "border-b-1 border-dashed" %>
+    <% end %>
+  </div>
+</div>

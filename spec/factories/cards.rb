@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :card do
-    name { "MyString" }
-    meaning { "MyText" }
+    name { Faker::Esport.player }
+    meaning { Faker::Esport.game }
+    association :user
   end
 end

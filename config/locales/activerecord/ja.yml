@@ -2,9 +2,13 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      card: カード
     attributes:
       user:
         email: メールアドレス
         name: ユーザー名
         password: パスワード
         password_confirmation: パスワード確認
+      card:
+        name: カード名
+        meaning: 意味

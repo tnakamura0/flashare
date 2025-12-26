@@ -82,5 +82,37 @@ RSpec.describe "Cards", type: :system do
         end
       end
     end
+
+    describe "カードの編集" do
+      let!(:card) { create(:card, user: user, name: 'テストカード', meaning: 'テスト') }
+      context "ログイン済みの場合" do
+        before do
+          login_as(user)
+        end
+        it "カードの編集ができること" do
+          visit edit_card_path(card)
+          expect(current_path).to eq edit_card_path(card)
+          fill_in "カード名", with: "テストカード（編集後）"
+          click_button "更新"
+          expect(page).to have_content "カードを更新しました"
+          expect(current_path).to eq cards_path
+        end
+      end
+    end
+
+    describe "カードの削除" do
+      let!(:card) { create(:card, user: user, name: 'テストカード', meaning: 'テスト') }
+      context "ログイン済みの場合" do
+        before do
+          login_as(user)
+        end
+        it "カードの削除ができること" do
+          expect {
+            visit cards_path
+            click_link "削除"
+        }.to change(Card, :count).by(-1)
+        end
+      end
+    end
   end
 end

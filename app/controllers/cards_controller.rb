@@ -30,7 +30,7 @@ class CardsController < ApplicationController
   def update
     @card = current_user.cards.find(params[:id])
     if @card.update(card_params)
-      redirect_to card_path(@card), notice: t("defaults.flash_message.updated", item: Card.model_name.human)
+      redirect_to cards_path, notice: t("defaults.flash_message.updated", item: Card.model_name.human)
     else
       flash.now[:alert] = t("defaults.flash_message.not_updated", item: Card.model_name.human)
       render :edit, status: :unprocessable_entity

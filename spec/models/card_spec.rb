@@ -9,13 +9,13 @@ RSpec.describe Card, type: :model do
       expect(card).to be_valid
     end
 
-    it "カード名が255文字以下の場合に有効であること" do
-      card = build(:card, name: "a" * 255)
+    it "カード名が22文字以下の場合に有効であること" do
+      card = build(:card, name: "a" * 22)
       expect(card).to be_valid
     end
 
-    it "意味が65535文字以内の場合に有効であること" do
-      card = build(:card, meaning: "a" * 65535)
+    it "意味が44文字以内の場合に有効であること" do
+      card = build(:card, meaning: "a" * 44)
       expect(card).to be_valid
     end
   end
@@ -33,16 +33,16 @@ RSpec.describe Card, type: :model do
       expect(card.errors[:meaning]).to include("を入力してください")
     end
 
-    it "カード名が256文字以上の場合に無効であること" do
-      card = build(:card, name: "a" * 256)
+    it "カード名が23文字以上の場合に無効であること" do
+      card = build(:card, name: "a" * 23)
       expect(card).to be_invalid
-      expect(card.errors[:name]).to include('は255文字以内で入力してください')
+      expect(card.errors[:name]).to include('は22文字以内で入力してください')
     end
 
-    it "意味が65536文字以上の場合に無効であること" do
-      card = build(:card, meaning: "a" * 65536)
+    it "意味が45文字以上の場合に無効であること" do
+      card = build(:card, meaning: "a" * 45)
       expect(card).to be_invalid
-      expect(card.errors[:meaning]).to include('は65535文字以内で入力してください')
+      expect(card.errors[:meaning]).to include('は44文字以内で入力してください')
     end
   end
 end

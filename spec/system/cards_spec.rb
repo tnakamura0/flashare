@@ -75,7 +75,7 @@ RSpec.describe "Cards", type: :system do
             visit new_card_path
             fill_in 'カード名', with: 'らんてくん'
             fill_in '意味', with: 'キャラクター'
-            click_button '作成'
+            click_button '登録'
           }.to change(Card, :count).by(1)
 
           expect(page).to have_content('カードを作成しました')

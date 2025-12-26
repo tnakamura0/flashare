@@ -17,9 +17,11 @@ class CardsController < ApplicationController
     end
   end
 
-  def show
-    @card = current_user.cards.find(params[:id])
-  end
+  # Cardの詳細ページは現状不要なのでルーティングから除外した
+  # 今後使用するかもしれないのでコードは残す
+  # def show
+  #   @card = current_user.cards.find(params[:id])
+  # end
 
   def edit
     @card = current_user.cards.find(params[:id])

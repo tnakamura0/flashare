@@ -8,8 +8,8 @@ class CardsController < ApplicationController
   end
 
   def create
-    card = current_user.cards.build(card_params)
-    if card.save
+    @card = current_user.cards.build(card_params)
+    if @card.save
       redirect_to cards_path, notice: t("defaults.flash_message.created", item: Card.model_name.human)
     else
       flash.now[:alert] = t("defaults.flash_message.not_created", item: Card.model_name.human)

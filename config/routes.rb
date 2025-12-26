@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   root "static_pages#home"
 
   resources :users, only: %i[new create]
-  resources :cards, only: %i[index new create show edit destroy]
+  resources :cards
 end

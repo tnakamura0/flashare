@@ -2,7 +2,7 @@
   <p class="font-bold"><%= card.name %></p>
   <p class="mt-1"><%= card.meaning %></p>
   <div class="mt-auto text-right">
-    <button class="border-b border-dashed"><%= t("defaults.edit") %></button>
+    <%= link_to t("defaults.edit"), edit_card_path(card), class: "border-b border-dashed" %>
     <span class="mx-1">|</span>
     <button class="border-b border-dashed"><%= t("defaults.delete") %></button>
   </div>

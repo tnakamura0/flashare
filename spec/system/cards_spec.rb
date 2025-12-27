@@ -78,7 +78,18 @@ RSpec.describe "Cards", type: :system do
             click_button '登録'
           }.to change(Card, :count).by(1)
 
+          expect(current_path).to eq cards_path
           expect(page).to have_content('カードを作成しました')
+        end
+
+        it "入力をしなかった場合にカードの作成ができないこと" do
+          expect {
+            visit new_card_path
+            click_button '登録'
+          }.to change(Card, :count).by(0)
+
+          expect(current_path).to eq cards_path
+          expect(page).to have_content('カードを作成出来ませんでした')
         end
       end
     end

@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :password, confirmation: true, length: { minimum: 8 }
 
   has_many :cards, dependent: :destroy
+  has_many :decks, dependent: :destroy
 end

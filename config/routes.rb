@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "deck_cards/index"
   get "login", to: "user_sessions#new"
   post "login", to: "user_sessions#create"
   delete "logout", to: "user_sessions#destroy"
@@ -19,5 +18,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :cards, only: %i[index new create edit update destroy]
-  resources :decks
+  resources :decks do
+    resources :deck_cards, only: %i[index create destroy]
+  end
 end

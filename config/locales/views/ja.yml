@@ -26,6 +26,9 @@ ja:
       deleted: "%{item}を削除しました"
       require_login: ログインしてください
       not_authorized: 権限がありません
+    link:
+      to_index_card_page: カード一覧
+      to_index_deck_page: デッキ一覧
   user_sessions:
     new:
       title: ログイン

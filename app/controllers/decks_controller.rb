@@ -13,7 +13,7 @@ class DecksController < ApplicationController
       redirect_to deck_path(@deck), notice: t("defaults.flash_message.created", item: Deck.model_name.human)
     else
       flash.now[:alert] = t("defaults.flash_message.not_created", item: Deck.model_name.human)
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

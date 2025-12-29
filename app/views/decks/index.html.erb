@@ -6,7 +6,7 @@
       <%= link_to t(".to_create_deck_page"), new_deck_path, class: "border-b-1 border-dashed" %>
       <div class="flex flex-wrap md:gap-1">
         <% @decks.each do |deck| %>
-          <%= render 'deck', deck: deck, deck_classes: "w-11/24 md:w-3/12 lg:w-2/12" %>
+          <%= render 'deck', deck: deck, deck_classes: "w-3/4 md:w-7/24 lg:w-5/24" %>
         <% end %>
       </div>
     <% else %>

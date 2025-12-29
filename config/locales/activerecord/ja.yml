@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       card: カード
+      deck: デッキ
     attributes:
       user:
         email: メールアドレス
@@ -12,3 +13,7 @@ ja:
       card:
         name: カード名
         meaning: 意味
+      deck:
+        name: デッキ名
+        description: 説明
+        public: 公開設定

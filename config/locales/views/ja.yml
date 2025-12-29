@@ -10,7 +10,10 @@ ja:
       password_confirmation: パスワード確認
   defaults:
     create: 作成
-    search_word: 検索ワード
+    public:
+      config: 公開設定
+      true: 公開
+      false: 非公開
     edit: 編集
     show: 詳細
     delete: 削除
@@ -51,6 +54,18 @@ ja:
       title: カード詳細
     edit:
       title: カード編集
+  decks:
+    index:
+      title: デッキ一覧
+      to_create_deck_page: デッキを作成する
+      no_deck_message: こちらからデッキを作成しましょう！
+    new:
+      title: デッキ作成
+      public: 
+    show:
+      title: デッキ詳細
+    edit:
+      title: デッキ詳細
   header:
     signup: 新規登録
     login: ログイン

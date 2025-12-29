@@ -3,6 +3,6 @@ class Card < ApplicationRecord
   validates :meaning, presence: true, length: { maximum: 44 }
 
   belongs_to :user
-  has_many :decks, through: :deck_cards
   has_many :deck_cards, dependent: :destroy
+  has_many :decks, through: :deck_cards
 end

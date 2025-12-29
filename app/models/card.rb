@@ -4,5 +4,5 @@ class Card < ApplicationRecord
 
   belongs_to :user
   has_many :decks, through: :deck_cards
-  had_many :deck_cards, dependent: :destroy
+  has_many :deck_cards, dependent: :destroy
 end

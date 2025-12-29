@@ -17,6 +17,7 @@ ja:
     edit: 編集
     show: 詳細
     delete: 削除
+    delete_from_deck: デッキから削除
     delete_confirm: 削除しますか？
     flash_message:
       created: "%{item}を作成しました"
@@ -26,6 +27,8 @@ ja:
       deleted: "%{item}を削除しました"
       require_login: ログインしてください
       not_authorized: 権限がありません
+      added: "%{item}を追加しました"
+      delete_from_deck: デッキからカードを削除しました
     link:
       to_index_card_page: カード一覧
       to_index_deck_page: デッキ一覧
@@ -73,6 +76,7 @@ ja:
   deck_cards:
     index:
       title: デッキ管理
+      add: 追加
   header:
     signup: 新規登録
     login: ログイン

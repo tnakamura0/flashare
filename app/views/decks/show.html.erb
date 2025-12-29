@@ -1,8 +1,16 @@
 <% content_for(:title, t(".title")) %>
-<div class="w-15/16 lg:w-5/12 mx-auto mt-8">
+<div class="w-15/16 mx-auto mt-8">
   <div class="flex flex-col items-center bg-cyan-600 rounded-3xl py-8">
     <h1 class="font-bold text-3xl lg:text-4xl"><%= t(".title") %></h1>
     <%= render 'deck', deck: @deck, deck_classes: "w-7/8", deck_page: "show" %>
+    <div class="mt-4"></div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6 w-7/8">
+      <% if @deck.cards.exists? %>
+        <% @deck.cards.each do |card| %>
+          <%= render 'decks/deck_cards', deck: @deck, card: card %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 <%= link_to t("defaults.link.to_index_deck_page"), decks_path, class: "text-cyan-600 border-b-1 border-dashed" %>

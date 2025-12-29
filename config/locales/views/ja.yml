@@ -29,6 +29,7 @@ ja:
     link:
       to_index_card_page: カード一覧
       to_index_deck_page: デッキ一覧
+      to_add_card_page: カード追加
   user_sessions:
     new:
       title: ログイン
@@ -68,7 +69,10 @@ ja:
     show:
       title: デッキ詳細
     edit:
-      title: デッキ詳細
+      title: デッキ編集
+  deck_cards:
+    index:
+      title: デッキ管理
   header:
     signup: 新規登録
     login: ログイン

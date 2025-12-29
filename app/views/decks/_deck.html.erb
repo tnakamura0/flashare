@@ -12,7 +12,11 @@
       <% end %>
     </div>
     <div class="">
-      <%= link_to t("defaults.show"), deck_path(deck), class: "border-b border-dashed" %>
+      <% if deck_page == "show" %>
+        <%= link_to t("defaults.link.to_add_card_page"), deck_deck_cards_path(deck), class: "border-b border-dashed" %>
+      <% else%>
+        <%= link_to t("defaults.show"), deck_path(deck), class: "border-b border-dashed" %>
+      <% end %>
       <span class="mx-1">|</span>
       <%= link_to t("defaults.edit"), edit_deck_path(deck), class: "border-b border-dashed" %>
       <span class="mx-1">|</span>

@@ -5,7 +5,7 @@
     <% if @decks.present? %>
       <%= link_to t(".to_create_deck_page"), new_deck_path, class: "border-b-1 border-dashed" %>
       <div class="mb-4"></div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
         <% @decks.each do |deck| %>
           <%= render 'deck', deck: deck, deck_page: "index" %>
         <% end %>

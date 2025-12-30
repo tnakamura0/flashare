@@ -4,7 +4,7 @@ class CreateQuizSessions < ActiveRecord::Migration[7.2]
       t.integer :current_question_index, default: 0
       t.integer :total_questions
       t.integer :status, default: 0, null: false
-      t.references :user, null: false, foreign_key: true, index: { unique: true }
+      t.references :user, null: false, foreign_key: true
       t.references :deck, null: false, foreign_key: true
 
       t.timestamps

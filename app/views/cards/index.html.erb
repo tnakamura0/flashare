@@ -4,9 +4,9 @@
   <div>
     <% if @cards.present? %>
       <%= link_to t(".to_create_card_page"), new_card_path, class: "border-b-1 border-dashed" %>
-      <div class="flex flex-wrap md:gap-1">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
         <% @cards.each do |card| %>
-          <%= render 'card', card: card, card_classes: "w-11/24 md:w-3/12 lg:w-2/12" %>
+          <%= render 'card', card: card %>
         <% end %>
       </div>
     <% else %>

@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :cards, only: %i[index new create edit update destroy]
-  resources :decks
+  resources :decks do
+    resources :deck_cards, only: %i[index create destroy]
+  end
 end

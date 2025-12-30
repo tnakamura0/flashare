@@ -1,7 +1,4 @@
-<%# デフォルト値を設定しつつ、外部から上書き可能にする %>
-<% card_classes ||= "w-full" %>
-
-<div class="flex flex-col border rounded <%= card_classes %> h-[200px] mx-auto mt-4 p-2">
+<div class="flex flex-col border rounded w-full h-[200px] mt-4 p-2">
   <p class="font-bold"><%= card.name %></p>
   <p class="mt-1"><%= card.meaning %></p>
   <div class="mt-auto text-right">

@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :cards, dependent: :destroy
   has_many :decks, dependent: :destroy
+  has_one :quiz_sessions, dependent: :destroy
 end

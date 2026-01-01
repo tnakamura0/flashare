@@ -14,7 +14,7 @@
         <%= link_to t('header.deck'), decks_path %>
       </li>
       <li>
-        <%= link_to t('header.quiz'), "#" %>
+        <%= link_to t('header.quiz'), quiz_sessions_path %>
       </li>
     </ul>
     <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>

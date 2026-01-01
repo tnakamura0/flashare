@@ -54,7 +54,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_12_30_215913) do
   end
 
   create_table "quiz_sessions", force: :cascade do |t|
-    t.integer "current_question_index", default: 0
     t.integer "total_questions"
     t.integer "status", default: 0, null: false
     t.bigint "user_id", null: false

@@ -13,4 +13,5 @@
     </div>
   </div>
 </div>
+<%= button_to t(".question_reservation"), quiz_sessions_path(deck_id: @deck.id), class: "text-black", method: :post %>
 <%= link_to t("defaults.link.to_index_deck_page"), decks_path, class: "text-cyan-600 border-b-1 border-dashed" %>

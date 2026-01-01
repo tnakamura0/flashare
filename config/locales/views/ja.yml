@@ -29,6 +29,8 @@ ja:
       not_authorized: 権限がありません
       added: "%{item}を追加しました"
       delete_from_deck: デッキからカードを削除しました
+      reserve_deck_question: デッキを出題予約しました
+      not_reserve_deck_question: 出題予約に失敗しました
     link:
       to_index_card_page: カード一覧
       to_index_deck_page: デッキ一覧
@@ -71,12 +73,24 @@ ja:
       public: 
     show:
       title: デッキ詳細
+      question_reservation: 出題予約
     edit:
       title: デッキ編集
   deck_cards:
     index:
       title: デッキ管理
       add: 追加
+  quiz_sessions:
+    index:
+      title: 問題一覧
+      start_quiz: 出題開始
+    show:
+      title: 結果発表
+      to_index_question_page: 問題一覧へ
+    question:
+      title: クイズ
+      correct: ⚪︎
+      incorrect: ×
   header:
     signup: 新規登録
     login: ログイン

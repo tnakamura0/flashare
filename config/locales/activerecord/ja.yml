@@ -4,6 +4,7 @@ ja:
       user: ユーザー
       card: カード
       deck: デッキ
+      quiz_session: クイズ
     attributes:
       user:
         email: メールアドレス

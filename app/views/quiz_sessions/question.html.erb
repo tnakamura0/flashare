@@ -1,10 +1,12 @@
 <% content_for(:title, t(".title")) %>
-<div class="text-cyan-600">
+<div class="text-cyan-600" data-controller="answer">
   <h1 class="font-bold text-4xl"><%= t(".title") %></h1>
   <h2>第<%= @quiz_session.answered_count + 1 %>問</h2>
   <p><%= @random_card.name %></p>
-  <button><%= t(".show_answer") %></button>
-  <p><%= @random_card.meaning %></p>
-  <%= button_to t(".correct"), answer_quiz_session_path(@quiz_session), { method: :post, params: { correct: true, card_id: @random_card.id } } %>
-  <%= button_to t(".incorrect"), answer_quiz_session_path(@quiz_session), { method: :post, params: { correct: false, card_id: @random_card.id } } %>
+  <button class="text-sky-50 bg-cyan-600 hover:opacity-70 border rounded p-2" data-answer-target="showAnswer" data-action="click->answer#switchButton"><%= t(".show_answer") %></button>
+  <div class="hidden" data-answer-target="answerButton">
+    <%= @random_card.meaning %>
+    <%= button_to t(".correct"), answer_quiz_session_path(@quiz_session), { method: :post, params: { correct: true, card_id: @random_card.id } } %>
+    <%= button_to t(".incorrect"), answer_quiz_session_path(@quiz_session), { method: :post, params: { correct: false, card_id: @random_card.id } } %>
+  </div>
 </div>

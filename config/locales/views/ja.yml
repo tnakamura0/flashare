@@ -90,7 +90,7 @@ ja:
       to_index_question_page: 問題一覧へ
     question:
       title: クイズ
-      show_answer: 回答を表示する
+      show_answer: 解答を表示する
       correct: ⚪︎
       incorrect: ×
   header:

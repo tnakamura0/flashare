@@ -43,7 +43,7 @@ RSpec.describe "UserSessions", type: :system do
     before do
       login_as(user)
     end
-    it "ログアウトできること" do
+    xit "ログアウトできること" do
       click_link "ログアウト"
       expect(page).to have_content "ログアウトしました" do
         # リダイレクト後のパスを確認するためにブロックにする

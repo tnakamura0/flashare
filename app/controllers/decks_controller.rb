@@ -19,6 +19,7 @@ class DecksController < ApplicationController
 
   def show
     @deck = current_user.decks.find(params[:id])
+    @deck_has_no_card = !@deck.cards.exists?
   end
 
   def edit

@@ -6,9 +6,10 @@
       <% @quiz_sessions.each do |quiz_session| %>
         <%= quiz_session.deck.name %>
         <%= button_to t(".start_quiz"), start_quiz_session_path(quiz_session) %>
-        <%= button_to t("default.delete"), quiz_session_path(quiz_session), class: "border-b border-dashed", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } %>
+        <%= button_to t("defaults.delete"), quiz_session_path(quiz_session), class: "border-b border-dashed", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } %>
       <% end %>
     <% else %>
+      <%= link_to t(".no_question_message"), decks_path, class: "border-b-1 border-dashed" %>
     <% end %>
   </div>
 </div>

@@ -84,11 +84,13 @@ ja:
     index:
       title: 問題一覧
       start_quiz: 出題開始
+      no_question_message: デッキを問題に追加しましょう！
     show:
       title: 結果発表
       to_index_question_page: 問題一覧へ
     question:
       title: クイズ
+      show_answer: 解答を表示する
       correct: ⚪︎
       incorrect: ×
   header:

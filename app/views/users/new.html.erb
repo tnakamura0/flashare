@@ -1,5 +1,5 @@
 <% content_for(:title, t('.title')) %>
-<div class="bg-cyan-600 w-sm mx-auto mt-12 px-10 py-6 rounded-4xl">
+<div class="bg-cyan-600 w-full md:w-1/2 lg:w-1/3 mx-auto px-8 md:px-10 py-6 rounded-4xl">
   <h1 class="font-bold text-xl"><%= t('.title') %></h1>
   <%= form_with model: @user do |f| %>
     <%= render 'shared/error_messages', object: f.object %>

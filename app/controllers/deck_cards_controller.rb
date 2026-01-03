@@ -2,7 +2,7 @@ class DeckCardsController < ApplicationController
   before_action :set_deck
 
   def index
-    @cards = Card.where.not(id: @deck.card_ids)
+    @cards = current_user.cards.where.not(id: @deck.card_ids)
   end
 
   def create

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :decks do
     resources :deck_cards, only: %i[index create destroy]
   end
+  resources :public_decks, only: %i[index]
   resources :quiz_sessions, only: %i[index create show destroy] do
     member do
       post :start

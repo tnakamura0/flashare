@@ -1,6 +1,7 @@
 <% content_for(:title, t(".title")) %>
 <div class="text-cyan-600">
   <h1 class="font-bold text-4xl mt-4"><%= t(".title") %></h1>
+  <%= link_to t(".to_public_decks_page"), public_decks_path, class: "border-b-1 border-dashed" %>
   <div>
     <% if @decks.present? %>
       <%= link_to t(".to_create_deck_page"), new_deck_path, class: "border-b-1 border-dashed" %>

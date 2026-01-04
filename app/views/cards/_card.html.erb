@@ -1,9 +1,13 @@
-<div class="flex flex-col border rounded w-full h-[200px] mt-4 p-2">
+<div class="flex flex-col border rounded-lg w-full h-[200px] mt-4 p-2">
   <p class="font-bold"><%= card.name %></p>
   <p class="mt-1"><%= card.meaning %></p>
-  <div class="mt-auto text-right">
-    <%= link_to t("defaults.edit"), edit_card_path(card), class: "border-b border-dashed" %>
+  <div class="mt-auto flex justify-end items-center">
+    <%= link_to  edit_card_path(card), class: "text-lime-600 hover:opacity-70 border-b border-dashed" do %>
+      <i class="fa-solid fa-pen"></i> <%= t("defaults.edit") %>
+    <% end %>
     <span class="mx-1">|</span>
-    <%= link_to t("defaults.delete"), card_path(card), class: "border-b border-dashed", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } %>
+    <%= button_to card_path(card), class: "text-red-500 hover:opacity-70", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } do %>
+      <i class="fa-solid fa-trash-can"></i> <%= t("defaults.delete") %>
+    <% end %>
   </div>
 </div>

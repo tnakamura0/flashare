@@ -1,13 +1,17 @@
-<header class="flex justify-between p-4 bg-cyan-600">
+<header class="flex justify-between fixed top-0 right-0 w-full p-4 text-lime-50 bg-linear-to-r from-blue-300/90 to-violet-300/90">
   <h1 class="text-3xl">
     <%= link_to "Flashare", root_path %>
   </h1>
   <ul class="flex items-center gap-4">
     <li>
-      <%= link_to t('header.signup'), new_user_path %>
+      <%= link_to new_user_path do %>
+        <i class="fa-solid fa-user-plus"></i> <%= t("header.signup") %>
+      <% end %>
     </li>
     <li>
-      <%= link_to t('header.login'), login_path %>
+      <%= link_to login_path do %>
+        <i class="fa-solid fa-user"></i> <%= t("header.login") %>
+      <% end %>
     </li>
   </ul>
 </header>

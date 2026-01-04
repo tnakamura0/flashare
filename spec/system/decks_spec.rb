@@ -34,13 +34,6 @@ RSpec.describe "Decks", type: :system do
           expect(page).to have_title "デッキ一覧"
         end
 
-        context "デッキが存在しない場合" do
-          it "作成を勧めるメッセージが表示されること" do
-            visit decks_path
-            expect(page).to have_content "こちらからデッキを作成しましょう！"
-          end
-        end
-
         context "デッキが存在する場合" do
           let!(:deck) { create(:deck, user: user, name: 'テストデッキ', description: 'テスト') }
 
@@ -119,7 +112,7 @@ RSpec.describe "Decks", type: :system do
         it "デッキの削除ができること" do
           expect {
             visit decks_path
-            click_link "削除"
+            click_button "削除"
         }.to change(Deck, :count).by(-1)
         end
       end

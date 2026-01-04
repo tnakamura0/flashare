@@ -1,35 +1,24 @@
 <% content_for(:title, t('.title')) %>
-<div class="bg-cyan-600 w-sm mx-auto mt-12 px-10 py-6 rounded-4xl">
-  <h1 class="font-bold text-xl"><%= t('.title') %></h1>
+<div class="bg-violet-50 w-full md:w-2/3 lg:w-2/5 mx-auto mt-24 mb-8 px-8 md:px-10 py-6 rounded-4xl">
+  <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t('.title') %></h1>
   <%= form_with model: @user do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
-    <div class="my-2">
-      <%= f.label :name %>
-    </div>
-    <div>
-      <%= f.text_field :name, class: "text-black bg-white w-full px-2" %>
-    </div>
-    <div class="my-2">
-      <%= f.label :email %>
-    </div>
-    <div>
-      <%= f.email_field :email, class: "text-black bg-white w-full px-2" %>
-    </div>
-    <div class="my-2">
-      <%= f.label :password %>
-    </div>
-    <div>
-      <%= f.password_field :password, class: "text-black bg-white w-full px-2" %>
-    </div>
-    <div class="my-2">
-      <%= f.label :password_confirmation %>
-    </div>
-    <div>
-      <%= f.password_field :password_confirmation, class: "text-black bg-white w-full px-2" %>
-    </div>
-    <%= f.submit class: "text-cyan-600 bg-sky-100 hover:bg-gray-300 block mx-auto mt-6 py-1 w-[100px] rounded-xl" %>
+
+    <%= f.label :name, class: "block mt-3" %>
+    <%= f.text_field :name, class: "bg-white border border-indigo-300 w-full mt-2 px-2 py-1" %>
+
+    <%= f.label :email, class: "block mt-3" %>
+    <%= f.email_field :email, class: "bg-white border border-indigo-300 w-full mt-2 px-2 py-1" %>
+
+    <%= f.label :password, class: "block mt-3" %>
+    <%= f.password_field :password, class: "bg-white border border-indigo-300 w-full mt-2 px-2 py-1" %>
+
+    <%= f.label :password_confirmation, class: "block mt-3" %>
+    <%= f.password_field :password_confirmation, class: "bg-white border border-indigo-300 w-full mt-2 px-2 py-1" %>
+
+    <%= f.submit class: "border border-indigo-400 hover:bg-violet-200 block mx-auto mt-6 py-1 w-24 rounded-xl" %>
   <% end %>
 </div>
 <div class="mt-6 text-center">
-  <%= link_to t('.to_login_page'), login_path, class: "text-cyan-600 border-b-1 border-dashed" %>
+  <%= link_to t('.to_login_page'), login_path, class: "border-b-1 border-dashed" %>
 </div>

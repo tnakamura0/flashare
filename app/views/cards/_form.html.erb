@@ -1,24 +1,10 @@
-<div class="w-3/4">
-  <%= form_with model: @card do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-    <div class="mt-2">
-      <div>
-        <%= f.label :name %>
-      </div>
-      <div>
-        <%= f.text_field :name, class: "text-black bg-white w-full mt-1 px-2" %>
-      </div>
-    </div>
-    <div class="mt-2">
-      <div>
-        <%= f.label :meaning %>
-      </div>
-      <div>
-        <%= f.text_area :meaning, class: "text-black bg-white w-full h-16 mt-1 px-2" %>
-      </div>
-    </div>
-    <div class="text-center">
-      <%= f.submit class: "border border-white rounded-lg w-[100px] mt-4" %>
-    </div>
-  <% end %>
-</div>
+<%= form_with model: @card do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.label :name, class: "block mt-3" %>
+  <%= f.text_field :name, class: "bg-white border border-indigo-400/90 w-full mt-1 px-2 py-1" %>
+
+  <%= f.label :meaning, class: "block mt-3" %>
+  <%= f.text_area :meaning, class: "bg-white border border-indigo-400/90 w-full h-16 mt-1 px-2 py-1" %>
+
+  <%= f.submit class: "block border border-indigo-400/90 rounded-lg w-24 mx-auto mt-4 py-1" %>
+<% end %>

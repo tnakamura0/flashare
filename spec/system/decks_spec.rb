@@ -119,7 +119,7 @@ RSpec.describe "Decks", type: :system do
         it "デッキの削除ができること" do
           expect {
             visit decks_path
-            click_link "削除"
+            click_button "削除"
         }.to change(Deck, :count).by(-1)
         end
       end

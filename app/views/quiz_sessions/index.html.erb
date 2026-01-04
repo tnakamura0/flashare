@@ -1,6 +1,6 @@
 <% content_for(:title, t(".title")) %>
-<div class="text-cyan-600">
-  <h1 class="font-bold text-4xl"><%= t(".title") %></h1>
+<div class="mt-24 mb-8">
+  <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
   <div>
     <% if @quiz_sessions.exists? %>
       <% @quiz_sessions.each do |quiz_session| %>

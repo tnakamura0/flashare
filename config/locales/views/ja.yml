@@ -75,6 +75,7 @@ ja:
       public: 
     show:
       title: デッキ詳細
+      added_cards: 追加済みのカード
       question_reservation: 出題予約
     edit:
       title: デッキ編集

@@ -1,17 +1,15 @@
 <% content_for(:title, t(".title")) %>
-<div class="w-15/16 mx-auto mt-8">
-  <div class="flex flex-col items-center bg-cyan-600 rounded-3xl py-8">
-    <h1 class="font-bold text-3xl lg:text-4xl"><%= t(".title") %></h1>
-    <%= render 'deck', deck: @deck, deck_classes: "w-7/8", deck_page: "show" %>
-    <div class="mt-4"></div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6 w-7/8">
-      <% if @deck.cards.exists? %>
-        <% @deck.cards.each do |card| %>
-          <%= render 'decks/deck_cards', deck: @deck, card: card %>
-        <% end %>
+<div class="bg-violet-50 w-full md:w-5/6 lg:w-7/8 mx-auto mt-24 mb-8 px-8 md:px-10 py-6 rounded-4xl">
+  <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
+  <%= render 'deck', deck: @deck, deck_page: "show" %>
+  <div class="font-bold text-lg mt-4 mb-2"><%= t(".added_cards") %></div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6 w-full">
+    <% if @deck.cards.exists? %>
+      <% @deck.cards.each do |card| %>
+        <%= render 'decks/deck_cards', deck: @deck, card: card %>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
-<%= button_to t(".question_reservation"), quiz_sessions_path(deck_id: @deck.id), { method: :post, disabled: @deck_has_no_card, class: "text-sky-50 bg-cyan-600 hover:opacity-70 disabled:bg-gray-400 rounded p-2" } %>
+<%= button_to t(".question_reservation"), quiz_sessions_path(deck_id: @deck.id), { method: :post, disabled: @deck_has_no_card, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-4 py-2" } %>
 <%= link_to t("defaults.link.to_index_deck_page"), decks_path, class: "text-cyan-600 border-b-1 border-dashed" %>

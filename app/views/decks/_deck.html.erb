@@ -1,6 +1,4 @@
-<% deck_classes ||= "w-full" %>
-
-<div class="flex flex-col border rounded <%= deck_classes %> h-[200px] mx-auto mt-4 p-2">
+<div class="flex flex-col border rounded-lg w-full h-[200px] p-2">
   <p class="font-bold"><%= deck.name %></p>
   <p class="mt-1"><%= deck.description %></p>
   <div class="mt-auto flex justify-between">
@@ -11,7 +9,7 @@
         <%= t("defaults.public.false") %>
       <% end %>
     </div>
-    <div class="">
+    <div class="mt-auto flex justify-end items-center">
       <% if deck_page == "show" %>
         <%= link_to t("defaults.link.to_add_card_page"), deck_deck_cards_path(deck), class: "border-b border-dashed" %>
       <% else%>
@@ -20,7 +18,7 @@
       <span class="mx-1">|</span>
       <%= link_to t("defaults.edit"), edit_deck_path(deck), class: "border-b border-dashed" %>
       <span class="mx-1">|</span>
-      <%= link_to t("defaults.delete"), deck_path(deck), class: "border-b border-dashed", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } %>
+      <%= button_to t("defaults.delete"), deck_path(deck), class: "text-violet-50 bg-red-500 hover:opacity-70 rounded px-1 md:px-2 py-0.5 md:py-1", method: :delete, data: { turbo_confirm: t("defaults.delete_confirm") } %>
     </div>
   </div>
 </div>

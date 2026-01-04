@@ -1,7 +1,8 @@
+<%# 未使用 %>
 <% content_for(:title, t(".title")) %>
 <div class="w-3/4 lg:w-5/12 mx-auto mt-8">
   <div class="flex flex-col items-center bg-cyan-600 rounded-3xl py-8">
-    <h1 class="font-bold text-3xl lg:text-4xl"><%= t(".title") %></h1>
+    <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
     <%= render 'card', card: @card, card_classes: "w-5/8" %>
   </div>
 </div>

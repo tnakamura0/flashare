@@ -12,37 +12,57 @@
   <nav class="md:hidden text-lime-50 w-4/5 h-screen bg-linear-to-r from-blue-400 to-violet-400 fixed top-0 -right-4/5 z-20 transition-all duration-600 text-center text-2xl" data-hamburger-target="hamburgerMenu">
     <ul class="py-15">
       <li class="py-2.5">
-        <%= link_to t('header.home'), root_path %>
+        <%= link_to root_path do %>
+          <i class="fa-regular fa-house"></i> <%= t('header.home') %>
+        <% end %>
       </li>
       <li class="py-2.5">
-        <%= link_to t('header.card'), cards_path %>
+        <%= link_to cards_path do %>
+          <i class="fa-regular fa-file"></i> <%= t('header.card') %>
+        <% end %>
       </li>
       <li class="py-2.5">
-        <%= link_to t('header.deck'), decks_path %>
+        <%= link_to decks_path do %>
+          <i class="fa-regular fa-folder"></i> <%= t('header.deck') %>
+        <% end %>
       </li>
       <li class="py-2.5">
-        <%= link_to t('header.quiz'), quiz_sessions_path %>
+        <%= link_to quiz_sessions_path do %>
+          <i class="fa-regular fa-circle-question"></i> <%= t('header.quiz') %>
+        <% end %>
       </li>
     </ul>
-    <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>
+    <%= link_to logout_path, data: { turbo_method: :delete } do %>
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t('header.logout') %>
+    <% end %>
   </nav>
 
   <%# タブレット・PC用のナビゲーションメニュー %>
   <nav class="hidden md:flex items-center gap-12">
     <ul class="flex items-center gap-4">
       <li>
-        <%= link_to t('header.home'), root_path %>
+        <%= link_to root_path do %>
+          <i class="fa-regular fa-house"></i> <%= t('header.home') %>
+        <% end %>
       </li>
       <li>
-        <%= link_to t('header.card'), cards_path %>
+        <%= link_to cards_path do %>
+          <i class="fa-regular fa-file"></i> <%= t('header.card') %>
+        <% end %>
       </li>
       <li>
-        <%= link_to t('header.deck'), decks_path %>
+        <%= link_to decks_path do %>
+          <i class="fa-regular fa-folder"></i> <%= t('header.deck') %>
+        <% end %>
       </li>
       <li>
-        <%= link_to t('header.quiz'), quiz_sessions_path %>
+        <%= link_to quiz_sessions_path do %>
+          <i class="fa-regular fa-circle-question"></i> <%= t('header.quiz') %>
+        <% end %>
       </li>
     </ul>
-    <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %>
+    <%= link_to logout_path, data: { turbo_method: :delete } do %>
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t('header.logout') %>
+    <% end %>
   </nav>
 </header>

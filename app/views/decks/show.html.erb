@@ -11,5 +11,7 @@
     <% end %>
   </div>
 </div>
-<%= button_to t(".question_reservation"), quiz_sessions_path(deck_id: @deck.id), { method: :post, disabled: @deck_has_no_card, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-4 py-2" } %>
+<%= button_to quiz_sessions_path(deck_id: @deck.id), { method: :post, disabled: @deck_has_no_card, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-4 py-2" } do %>
+  <i class="fa-solid fa-folder-plus"></i> <%= t(".question_reservation") %>
+<% end %>
 <%= link_to t("defaults.link.to_index_deck_page"), decks_path, class: "text-cyan-600 border-b-1 border-dashed" %>

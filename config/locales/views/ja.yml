@@ -17,9 +17,9 @@ ja:
     edit: 編集
     show: 詳細
     delete: 削除
-    delete_from_deck: デッキから削除
+    delete_from_deck: 外す
     delete_confirm: 削除しますか？
-    add: クイズ一覧に追加
+    question_reservation: 出題予約
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -69,7 +69,6 @@ ja:
       title: デッキ一覧
       to_public_decks_page: 公開デッキ一覧へ
       to_create_deck_page: デッキを作成する
-      no_deck_message: こちらからデッキを作成しましょう！
     new:
       title: デッキ作成
       public: 

@@ -1,5 +1,5 @@
 <% content_for(:title, t(".title")) %>
-<div class="bg-violet-50 w-full md:w-5/6 lg:w-7/8 mx-auto mt-24 mb-8 px-2 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-3xl">
+<div class="bg-violet-50 w-full mx-auto mt-24 mb-8 px-2 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-3xl">
   <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
   <p class="text-xl mt-2 lg:mt-4"><%= @deck.name %></p>
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 lg:gap-6">
@@ -8,7 +8,9 @@
         <p class="font-bold"><%= card.name %></p>
         <p class="mt-1"><%= card.meaning %></p>
         <div class="mt-auto text-right">
-          <%= button_to t(".add"), deck_deck_cards_path(@deck, card_id: card.id), method: :post, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-4 py-1" %>
+          <%= button_to deck_deck_cards_path(@deck, card_id: card.id), method: :post, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-3 py-1" do %>
+            <i class="fa-solid fa-circle-plus"></i> <%= t(".add") %>
+          <% end %>
         </div>
       </div>
     <% end %>

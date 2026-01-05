@@ -1,6 +1,6 @@
 class Card < ApplicationRecord
-  validates :name, presence: true, length: { maximum: 22 }
-  validates :meaning, presence: true, length: { maximum: 44 }
+  validates :name, presence: true, length: { maximum: 18 }
+  validates :meaning, presence: true, length: { maximum: 36 }
 
   belongs_to :user
   has_many :deck_cards, dependent: :destroy

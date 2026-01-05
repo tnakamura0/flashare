@@ -3,7 +3,9 @@
   <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
   <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
     <% @public_decks.each do |public_deck| %>
-      <%= render "public_deck", public_deck: public_deck %>
+      <% if public_deck.deck_cards.exists? %>
+        <%= render "public_deck", public_deck: public_deck %>
+      <% end %>
     <% end %>
   </div>
 </div>

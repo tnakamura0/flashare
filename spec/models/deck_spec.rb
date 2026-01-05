@@ -9,8 +9,8 @@ RSpec.describe Deck, type: :model do
       expect(deck).to be_valid
     end
 
-    it "デッキ名が50文字以下の場合に有効であること" do
-      deck = build(:deck, name: "a" * 50)
+    it "デッキ名が36文字以下の場合に有効であること" do
+      deck = build(:deck, name: "a" * 36)
       expect(deck).to be_valid
     end
 
@@ -19,8 +19,8 @@ RSpec.describe Deck, type: :model do
       expect(deck).to be_valid
     end
 
-    it "説明が100文字以内の場合に有効であること" do
-      deck = build(:deck, description: "a" * 100)
+    it "説明が72文字以内の場合に有効であること" do
+      deck = build(:deck, description: "a" * 72)
       expect(deck).to be_valid
     end
 
@@ -44,16 +44,16 @@ RSpec.describe Deck, type: :model do
       expect(deck.errors[:name]).to include("を入力してください")
     end
 
-    it "デッキ名が51文字以上の場合に無効であること" do
-      deck = build(:deck, name: "a" * 51)
+    it "デッキ名が37文字以上の場合に無効であること" do
+      deck = build(:deck, name: "a" * 37)
       expect(deck).to be_invalid
-      expect(deck.errors[:name]).to include('は50文字以内で入力してください')
+      expect(deck.errors[:name]).to include('は36文字以内で入力してください')
     end
 
-    it "説明が101文字以上の場合に無効であること" do
-      deck = build(:deck, description: "a" * 101)
+    it "説明が73文字以上の場合に無効であること" do
+      deck = build(:deck, description: "a" * 73)
       expect(deck).to be_invalid
-      expect(deck.errors[:description]).to include('は100文字以内で入力してください')
+      expect(deck.errors[:description]).to include('は72文字以内で入力してください')
     end
 
     it "公開設定がnilの場合に無効であること" do

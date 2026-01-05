@@ -1,9 +1,9 @@
 <% flash.each do |message_type, message| %>
-  <div class="fixed top-17 right-0 left-0 mx-auto h-8 text-white">
+  <div class="fixed top-17 right-0 left-0 mx-auto h-8 text-white" data-controller="removals" data-action="animationend->removals#remove">
     <% if message_type == "notice" %>
-      <p class="bg-linear-to-r from-green-500 to-teal-500 text-center"><%= message %></p>
+      <p class="bg-linear-to-r from-green-500 to-teal-500 text-center animate-fade-out"><%= message %></p>
     <% else %>
-      <p class="bg-linear-to-r from-red-500 to-rose-600 text-center"><%= message %></p>
+      <p class="bg-linear-to-r from-red-500 to-rose-600 text-center animate-fade-out"><%= message %></p>
     <% end %>
   </div>
 <% end %>

@@ -31,7 +31,7 @@ RSpec.describe "Decks", type: :system do
 
         it "正しいタイトルが表示されていること" do
           visit decks_path
-          expect(page).to have_title "デッキ一覧"
+          expect(page).to have_title "マイデッキ"
         end
 
         context "デッキが存在する場合" do
@@ -68,7 +68,7 @@ RSpec.describe "Decks", type: :system do
             visit new_deck_path
             fill_in 'デッキ名', with: 'テストデッキ'
             fill_in '説明', with: 'デッキの説明'
-            click_button '登録'
+            click_button '作成'
           }.to change(Deck, :count).by(1)
 
           expect(page).to have_content('デッキを作成しました')
@@ -77,7 +77,7 @@ RSpec.describe "Decks", type: :system do
         it "入力をしなかった場合にデッキの作成ができないこと" do
           expect {
             visit new_deck_path
-            click_button '登録'
+            click_button '作成'
           }.to change(Deck, :count).by(0)
 
           expect(current_path).to eq decks_path

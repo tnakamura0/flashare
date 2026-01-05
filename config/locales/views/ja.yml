@@ -1,7 +1,7 @@
 ja:
   helpers:
     submit:
-      create: 登録
+      create: 作成
       submit: 保存
       update: 更新
     label:
@@ -9,7 +9,6 @@ ja:
       password: パスワード
       password_confirmation: パスワード確認
   defaults:
-    create: 作成
     public:
       config: 公開設定
       true: 公開
@@ -50,6 +49,7 @@ ja:
     new:
       title: ユーザー登録
       to_login_page: 登録済みの方はこちら
+      create: 登録
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
@@ -66,15 +66,16 @@ ja:
       title: カード編集
   decks:
     index:
-      title: デッキ一覧
-      to_public_decks_page: 公開デッキ一覧へ
-      to_create_deck_page: デッキを作成する
+      title: マイデッキ
+      to_public_decks_page: 公開デッキ一覧
+      to_create_deck_page: デッキを新規作成
     new:
       title: デッキ作成
       public: 
     show:
       title: デッキ詳細
       added_cards: 追加済みのカード
+      no_cards: カードが追加されていません
       question_reservation: 出題予約
     edit:
       title: デッキ編集
@@ -92,12 +93,14 @@ ja:
       no_question_message: デッキを問題に追加しましょう！
     show:
       title: 結果発表
+      result: 全%{total_questions}問中%{correct_number}問正解しました
       to_index_question_page: 問題一覧へ
     question:
       title: クイズ
+      quiz_number: 第%{number}問
       show_answer: 解答を表示する
-      correct: ⚪︎
-      incorrect: ×
+      correct: 正解
+      incorrect: 不正解
   header:
     signup: 新規登録
     login: ログイン

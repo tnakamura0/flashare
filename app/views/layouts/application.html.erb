@@ -16,10 +16,12 @@
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <script src="https://kit.fontawesome.com/cb2bbb68d1.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-linear-to-r from-blue-300/60 to-violet-300/60 text-indigo-400/90">
+  <body class="bg-linear-to-r from-blue-500/60 to-violet-500/60 text-indigo-600/90">
     <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>

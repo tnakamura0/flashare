@@ -13,8 +13,8 @@ class DeckCardsController < ApplicationController
   end
 
   def destroy
-    card = @deck.deck_cards.find(params[:id])
-    card.destroy!
+    @deck_card = @deck.deck_cards.find(params[:id])
+    @deck_card.destroy!
     redirect_to deck_path(@deck), status: :see_other, notice: t("defaults.flash_message.delete_from_deck")
   end
 

@@ -75,7 +75,7 @@ RSpec.describe "Cards", type: :system do
             visit new_card_path
             fill_in 'カード名', with: 'らんてくん'
             fill_in '意味', with: 'キャラクター'
-            click_button '登録'
+            click_button '作成'
           }.to change(Card, :count).by(1)
 
           expect(current_path).to eq cards_path
@@ -85,7 +85,7 @@ RSpec.describe "Cards", type: :system do
         it "入力をしなかった場合にカードの作成ができないこと" do
           expect {
             visit new_card_path
-            click_button '登録'
+            click_button '作成'
           }.to change(Card, :count).by(0)
 
           expect(current_path).to eq cards_path

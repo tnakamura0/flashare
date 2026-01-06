@@ -11,7 +11,7 @@ class QuizSessionsController < ApplicationController
       status: :pending
     )
     if @quiz_session.save
-      redirect_to decks_path, notice: t("defaults.flash_message.reserve_deck_question")
+      redirect_to quiz_sessions_path, notice: t("defaults.flash_message.reserve_deck_question")
     else
       flash.now[:alert] = t("defaults.flash_message.not_reserve_deck_question")
       render "decks/show", status: :unprocessable_entity

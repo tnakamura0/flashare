@@ -21,15 +21,16 @@
     <script src="https://kit.fontawesome.com/cb2bbb68d1.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-linear-to-r from-blue-500/60 to-violet-500/60 text-indigo-600/90">
+  <body class="flex flex-col min-h-screen bg-linear-to-r from-blue-500/60 to-violet-500/60 text-indigo-600/90">
     <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>
     <%= render 'shared/flash_message' %>
-    <main class="container mx-auto px-4">
+    <main class="grow container mx-auto px-4">
       <%= yield %>
     </main>
+    <%= render 'shared/footer' %>
   </body>
 </html>

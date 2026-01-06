@@ -9,6 +9,11 @@ ja:
       password: パスワード
       password_confirmation: パスワード確認
   defaults:
+    home: ホーム
+    cards: カード
+    my_decks: マイデッキ
+    public_decks: 公開デッキ
+    quiz: クイズ
     public:
       config: 公開設定
       true: 公開

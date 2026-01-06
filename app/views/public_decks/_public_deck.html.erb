@@ -1,6 +1,10 @@
-<div class="flex flex-col border rounded-lg w-full h-[200px] p-2">
-  <p><%= public_deck.user.name %></p>
-  <p class="font-bold"><%= public_deck.name %></p>
+<div class="flex flex-col border rounded-lg w-full h-[250px] p-2">
+  <p>
+    <span class="border-b">
+      <i class="fa-solid fa-user"></i> <%= public_deck.user.name %>
+    </span>
+  </p>
+  <p class="font-bold mt-2"><%= public_deck.name %></p>
   <p class="mt-1"><%= public_deck.description %></p>
   <div class="mt-auto text-right">
     <%= button_to quiz_sessions_path, { method: :post, params: { deck_id: public_deck.id }, class:"text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-4 py-1" } do %>

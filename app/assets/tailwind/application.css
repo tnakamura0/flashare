@@ -14,3 +14,7 @@
     to { opacity: 1; }
   }
 }
+
+.home-timeline {
+  @apply pl-5 pb-2 relative [counter-increment:section] after:content-[counter(section)'.'] after:w-px after:h-full after:text-white after:bg-indigo-500 after:absolute after:top-0 after:left-0 before:text-sm before:bg-indigo-500 before:w-7 before:h-7 before:rounded-full before:absolute before:top-0 before:-left-2.5
+}

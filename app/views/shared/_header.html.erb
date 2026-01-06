@@ -1,70 +1,83 @@
-<header class="flex justify-between fixed top-0 right-0 z-20 w-full p-4 text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90" data-controller="hamburger">
-  <h1 class="text-2xl lg:text-3xl">
+<header class="flex justify-between fixed top-0 right-0 z-20 w-full h-16 p-4 text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90" data-controller="hamburger">
+  <h1 class="text-2xl">
     <%= link_to "Flashare", root_path %>
   </h1>
-  <%# モバイルデバイス用のハンバーガーメニュー %>
-  <div class="md:hidden w-12.5 h-12.5 fixed top-1.25 right-2.5 z-40" data-action="click->hamburger#switchMenu">
+  <%# ハンバーガーメニュー %>
+  <div class="w-12.5 h-12.5 fixed top-1.25 right-2.5 z-40" data-action="click->hamburger#switchMenu">
     <span class="top-4 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine1"></span>
     <span class="top-6.25 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine2"></span>
     <span class="top-8.5 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine3"></span>
   </div>
-  <%# モバイルデバイス用のナビゲーションメニュー %>
-  <nav class="md:hidden text-lime-50 w-4/5 h-screen bg-linear-to-r from-blue-600 to-violet-600 fixed top-0 -right-4/5 z-30 transition-all duration-600 text-center text-2xl" data-hamburger-target="hamburgerMenu">
+  <%# モバイルで展開されるナビゲーションメニュー %>
+  <nav class="md:hidden text-lime-50 w-4/5 h-screen bg-linear-to-r from-blue-600 to-violet-600 fixed top-0 -right-4/5 z-30 transition-all duration-600 text-left text-xl" data-hamburger-target="hamburgerMenuMobile">
     <ul class="py-15">
-      <li class="py-2.5">
-        <%= link_to root_path do %>
-          <i class="fa-regular fa-house"></i> <%= t('header.home') %>
+      <li class="pl-8 py-2.5">
+        <%= link_to "#" do %>
+          <i class="fa-solid fa-circle-info"></i> <%= t("defaults.terms_of_use") %>
         <% end %>
       </li>
-      <li class="py-2.5">
-        <%= link_to cards_path do %>
-          <i class="fa-regular fa-file"></i> <%= t('header.card') %>
-        <% end %>
-      </li>
-      <li class="py-2.5">
-        <%= link_to decks_path do %>
-          <i class="fa-regular fa-folder"></i> <%= t('header.deck') %>
-        <% end %>
-      </li>
-      <li class="py-2.5">
-        <%= link_to quiz_sessions_path do %>
-          <i class="fa-regular fa-circle-question"></i> <%= t('header.quiz') %>
+      <li class="pl-8 py-2.5">
+        <%= link_to "#" do %>
+          <i class="fa-solid fa-circle-info"></i> <%= t("defaults.privacy_policy") %>
         <% end %>
       </li>
     </ul>
-    <%= link_to logout_path, data: { turbo_method: :delete } do %>
-      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t('header.logout') %>
+    <div class="pl-8">
+      <%= link_to logout_path, data: { turbo_method: :delete } do %>
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t("defaults.logout") %>
     <% end %>
+    </div>
+  </nav>
+  <%# タブレット・PCで展開されるナビゲーションメニュー %>
+  <nav class="hidden md:block text-lime-50 w-3/10 h-screen bg-linear-to-r from-blue-600 to-violet-600 fixed top-0 -right-3/10 z-30 transition-all duration-600 text-left text-xl" data-hamburger-target="hamburgerMenu">
+    <ul class="py-15">
+      <li class="pl-8 lg:pl-16 py-2.5">
+        <%= link_to "#" do %>
+          <i class="fa-solid fa-circle-info"></i> <%= t("defaults.terms_of_use") %>
+        <% end %>
+      </li>
+      <li class="pl-8 lg:pl-16 py-2.5">
+        <%= link_to "#" do %>
+          <i class="fa-solid fa-circle-info"></i> <%= t("defaults.privacy_policy") %>
+        <% end %>
+      </li>
+    </ul>
+    <div class="pl-8 lg:pl-16">
+      <%= link_to logout_path, data: { turbo_method: :delete } do %>
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t("defaults.logout") %>
+    <% end %>
+    </div>
   </nav>
   <%# オーバーレイ %>
   <div class="hidden fixed inset-0 bg-black/50 z-20 animate-fade-in" data-hamburger-target="overlay" data-action="click->hamburger#switchMenu"></div>
-
-  <%# タブレット・PC用のナビゲーションメニュー %>
-  <nav class="hidden md:flex items-center gap-12">
+  <%# タブレット・PCで常時表示されるナビゲーションメニュー %>
+  <nav class="hidden md:flex items-center gap-12 fixed top-5 right-20">
     <ul class="flex items-center gap-4">
       <li>
         <%= link_to root_path do %>
-          <i class="fa-regular fa-house"></i> <%= t('header.home') %>
+          <i class="fa-regular fa-house"></i> <%= t("defaults.home") %>
         <% end %>
       </li>
       <li>
         <%= link_to cards_path do %>
-          <i class="fa-regular fa-file"></i> <%= t('header.card') %>
+          <i class="fa-regular fa-file"></i> <%= t("defaults.cards") %>
         <% end %>
       </li>
       <li>
         <%= link_to decks_path do %>
-          <i class="fa-regular fa-folder"></i> <%= t('header.deck') %>
+          <i class="fa-regular fa-folder"></i> <%= t("defaults.my_decks") %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to public_decks_path do %>
+          <i class="fa-regular fa-folder-open"></i> <%= t("defaults.public_decks") %>
         <% end %>
       </li>
       <li>
         <%= link_to quiz_sessions_path do %>
-          <i class="fa-regular fa-circle-question"></i> <%= t('header.quiz') %>
+          <i class="fa-regular fa-circle-question"></i> <%= t("defaults.quiz") %>
         <% end %>
       </li>
     </ul>
-    <%= link_to logout_path, data: { turbo_method: :delete } do %>
-      <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t('header.logout') %>
-    <% end %>
   </nav>
 </header>

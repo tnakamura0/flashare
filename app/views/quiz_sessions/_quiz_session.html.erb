@@ -1,0 +1,17 @@
+<div class="flex flex-col border-2 border-indigo-800 shadow-sm shadow-blue-300 rounded-lg w-full h-[250px] p-2">
+  <p>
+    <span class="border-b">
+      <i class="fa-solid fa-user"></i> <%= quiz_session.user.name %>
+    </span>
+  </p>
+  <p class="font-bold mt-2"><%= quiz_session.deck.name %></p>
+  <p class="mt-1"><%= quiz_session.deck.description %></p>
+  <div class="mt-auto flex justify-end items-center gap-2">
+    <%= button_to start_quiz_session_path(quiz_session), class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-2 py-1" do %>
+      <i class="fa-solid fa-circle-play"></i> <%= t("defaults.start_quiz") %>
+    <% end %>
+    <%= button_to quiz_session_path(quiz_session), class: "text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded px-2 py-1", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } do %>
+      <i class="fa-solid fa-folder-minus"></i> <%= t("defaults.quit_quiz") %>
+    <% end %>
+  </div>
+</div>

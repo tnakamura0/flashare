@@ -9,11 +9,16 @@ ja:
       password: パスワード
       password_confirmation: パスワード確認
   defaults:
+    signup: 新規登録
+    login: ログイン
+    logout: ログアウト
     home: ホーム
     cards: カード
     my_decks: マイデッキ
     public_decks: 公開デッキ
     quiz: クイズ
+    terms_of_use: 利用規約（仮）
+    privacy_policy: プライバシーポリシー（仮）
     public:
       config: 公開設定
       true: 公開
@@ -24,6 +29,8 @@ ja:
     delete_from_deck: 外す
     delete_confirm: 削除しますか？
     question_reservation: 出題予約
+    start_quiz: 出題開始
+    quit_quiz: 出題取消
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -36,10 +43,17 @@ ja:
       delete_from_deck: デッキからカードを削除しました
       reserve_deck_question: デッキを出題予約しました
       not_reserve_deck_question: 出題予約に失敗しました
+      no_cards: デッキにカードがありません
     link:
       to_index_card_page: カード一覧
       to_index_deck_page: デッキ一覧
       to_add_card_page: カード追加
+  static_pages:
+    home:
+      title: Flashare
+      info: フラッシュカードを作ってシェアしよう
+      how_to_use:
+        title: 使い方
   user_sessions:
     new:
       title: ログイン
@@ -61,7 +75,7 @@ ja:
   cards:
     index:
       title: カード一覧
-      to_create_card_page: カードを作成する
+      to_create_card_page: カードを新規作成
       no_card_message: こちらからカードを作成しましょう！
     new:
       title: カード作成
@@ -72,7 +86,7 @@ ja:
   decks:
     index:
       title: マイデッキ
-      to_public_decks_page: 公開デッキ一覧
+      to_public_decks_page: 公開デッキ
       to_create_deck_page: デッキを新規作成
     new:
       title: デッキ作成
@@ -90,15 +104,15 @@ ja:
       add: 追加
   public_decks:
     index:
-      title: 公開デッキ一覧
+      title: 公開デッキ
+      to_my_decks_page: マイデッキ
   quiz_sessions:
     index:
       title: 問題一覧
-      start_quiz: 出題開始
       no_question_message: デッキを問題に追加しましょう！
     show:
       title: 結果発表
-      result: 全%{total_questions}問中%{correct_number}問正解しました
+      result: 全%{total_questions}問中%{correct_number}問正解しました。
       to_index_question_page: 問題一覧へ
     question:
       title: クイズ
@@ -106,11 +120,3 @@ ja:
       show_answer: 解答を表示する
       correct: 正解
       incorrect: 不正解
-  header:
-    signup: 新規登録
-    login: ログイン
-    logout: ログアウト
-    home: ホーム
-    card: カード
-    deck: デッキ
-    quiz: クイズ

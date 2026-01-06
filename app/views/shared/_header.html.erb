@@ -1,15 +1,15 @@
-<header class="flex justify-between fixed top-0 right-0 w-full p-4 text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90" data-controller="hamburger">
+<header class="flex justify-between fixed top-0 right-0 z-20 w-full p-4 text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90" data-controller="hamburger">
   <h1 class="text-2xl lg:text-3xl">
     <%= link_to "Flashare", root_path %>
   </h1>
   <%# モバイルデバイス用のハンバーガーメニュー %>
-  <div class="md:hidden w-12.5 h-12.5 fixed top-1.25 right-2.5 z-30" data-action="click->hamburger#switchMenu">
+  <div class="md:hidden w-12.5 h-12.5 fixed top-1.25 right-2.5 z-40" data-action="click->hamburger#switchMenu">
     <span class="top-4 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine1"></span>
     <span class="top-6.25 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine2"></span>
     <span class="top-8.5 w-7.5 h-0.75 bg-lime-50 inline-block absolute left-2.5 transition-all duration-400" data-hamburger-target="hamburgerLine3"></span>
   </div>
   <%# モバイルデバイス用のナビゲーションメニュー %>
-  <nav class="md:hidden text-lime-50 w-4/5 h-screen bg-linear-to-r from-blue-600 to-violet-600 fixed top-0 -right-4/5 z-20 transition-all duration-600 text-center text-2xl" data-hamburger-target="hamburgerMenu">
+  <nav class="md:hidden text-lime-50 w-4/5 h-screen bg-linear-to-r from-blue-600 to-violet-600 fixed top-0 -right-4/5 z-30 transition-all duration-600 text-center text-2xl" data-hamburger-target="hamburgerMenu">
     <ul class="py-15">
       <li class="py-2.5">
         <%= link_to root_path do %>
@@ -36,6 +36,8 @@
       <i class="fa-solid fa-arrow-right-from-bracket"></i> <%= t('header.logout') %>
     <% end %>
   </nav>
+  <%# オーバーレイ %>
+  <div class="hidden fixed inset-0 bg-black/50 z-20 animate-fade-in" data-hamburger-target="overlay" data-action="click->hamburger#switchMenu"></div>
 
   <%# タブレット・PC用のナビゲーションメニュー %>
   <nav class="hidden md:flex items-center gap-12">

@@ -1,0 +1,62 @@
+<%# モバイルデバイスのフッター %>
+<footer class="md:hidden fixed bottom-0 right-0 z-10 w-full text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90">
+  <ul class="grid grid-cols-5 gap-1 py-2">
+    <li class="">
+      <%= link_to root_path, class: "flex flex-col justify-center items-center" do %>
+        <span class="text-xl">
+          <i class="fa-regular fa-house"></i>
+        </span>
+        <span class="text-sm">
+          <%= t("defaults.home") %>
+        </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to cards_path, class: "flex flex-col justify-center items-center" do %>
+        <span class="text-xl">
+          <i class="fa-regular fa-file"></i>
+        </span>
+        <span class="text-sm">
+          <%= t("defaults.cards") %>
+        </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to decks_path, class: "flex flex-col justify-center items-center" do %>
+        <span class="text-xl">
+          <i class="fa-regular fa-folder"></i>
+        </span>
+        <span class="text-sm">
+          <%= t("defaults.my_decks") %>
+        </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to public_decks_path, class: "flex flex-col justify-center items-center" do %>
+        <span class="text-xl">
+          <i class="fa-regular fa-folder-open"></i>
+        </span>
+        <span class="text-sm">
+          <%= t("defaults.public_decks") %>
+        </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to quiz_sessions_path, class: "flex flex-col justify-center items-center" do %>
+        <span class="text-xl">
+          <i class="fa-regular fa-circle-question"></i>
+        </span>
+        <span class="text-sm">
+          <%= t("defaults.quiz") %>
+        </span>
+      <% end %>
+    </li>
+  </ul>
+</footer>
+
+<%# タブレット・PCのフッター %>
+<footer class="hidden md:block">
+  <div class="text-sm text-center">
+    &copy; 2026 Flashare by karume
+  </div>
+</footer>

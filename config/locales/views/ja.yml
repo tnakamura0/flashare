@@ -36,6 +36,7 @@ ja:
       delete_from_deck: デッキからカードを削除しました
       reserve_deck_question: デッキを出題予約しました
       not_reserve_deck_question: 出題予約に失敗しました
+      no_cards: デッキにカードがありません
     link:
       to_index_card_page: カード一覧
       to_index_deck_page: デッキ一覧

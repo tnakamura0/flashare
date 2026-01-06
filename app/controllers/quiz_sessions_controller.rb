@@ -1,10 +1,10 @@
 class QuizSessionsController < ApplicationController
+  before_action :deck_need_cards, only: %i[create]
   def index
     @quiz_sessions = current_user.quiz_sessions.pending
   end
 
   def create
-    @deck = Deck.find(params[:deck_id])
     @quiz_session = current_user.quiz_sessions.build(
       deck: @deck,
       total_questions: @deck.cards.count,
@@ -66,5 +66,15 @@ class QuizSessionsController < ApplicationController
     @quiz_session = current_user.quiz_sessions.find(params[:id])
     @answers = @quiz_session.answers
     @correct_number = @answers.where(correct: true).count
+  end
+
+  private
+
+  def deck_need_cards
+    @deck = Deck.find(params[:deck_id])
+    unless @deck.cards.exists?
+      flash.now[:alert] = t("defaults.flash_message.no_cards")
+      render 'decks/show', status: :unprocessable_entity
+    end
   end
 end

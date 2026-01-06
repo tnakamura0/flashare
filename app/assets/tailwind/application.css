@@ -2,9 +2,15 @@
 
 @theme {
   --animate-fade-out: fade-out 4s ease-in-out forwards;
+  --animate-fade-in: fade-in 0.3s ease-in-out forwards;
 
   @keyframes fade-out {
     from { opacity: 1; }
     to { opacity: 0; }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 }

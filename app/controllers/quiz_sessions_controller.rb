@@ -74,7 +74,7 @@ class QuizSessionsController < ApplicationController
     @deck = Deck.find(params[:deck_id])
     unless @deck.cards.exists?
       flash.now[:alert] = t("defaults.flash_message.no_cards")
-      render 'decks/show', status: :unprocessable_entity
+      render "decks/show", status: :unprocessable_entity
     end
   end
 end

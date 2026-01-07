@@ -19,6 +19,8 @@ ja:
     quiz: クイズ
     terms_of_use: 利用規約（仮）
     privacy_policy: プライバシーポリシー（仮）
+    create_card: カードを作成
+    create_deck: デッキを作成
     public:
       config: 公開設定
       true: 公開
@@ -45,7 +47,6 @@ ja:
       not_reserve_deck_question: 出題予約に失敗しました
       no_cards: デッキにカードがありません
     link:
-      to_index_card_page: カード一覧
       to_add_card_page: カード追加
   static_pages:
     home:
@@ -55,22 +56,22 @@ ja:
         title: 使い方
         step1:
           title: ユーザー登録・ログイン
-          content: まずはユーザー登録をしよう。
+          content_html: まずは%{signup}をしよう。
         step2:
           title: カード作成
-          content: 名前と意味がセットのカードを作成しよう。
+          content_html: 名前と意味がセットの%{create_card}しよう。
         step3:
           title: デッキ作成
-          content: デッキを作成してデッキ詳細ページからカードを追加しよう。
+          content_html: "%{create_deck}してデッキ詳細ページからカードを追加しよう。"
         step4:
           title: 公開デッキを見る
-          content: 他のユーザーが公開したデッキを公開デッキページで見てみよう。
+          content_html: 他のユーザーが公開したデッキを%{public_decks}で見てみよう。
         step5:
           title: 出題予約
-          content: デッキ詳細ページや他ユーザーの公開デッキから出題予約しよう。
+          content_html: 作成したデッキの詳細ページや%{public_decks}から出題予約しよう。
         step6:
           title: クイズを解く
-          content: クイズページから問題を解こう。出題予約したデッキ内からランダムに出題！
+          content_html: "%{quiz}から問題を解こう。出題予約したデッキ内からランダムに出題！"
   user_sessions:
     new:
       title: ログイン

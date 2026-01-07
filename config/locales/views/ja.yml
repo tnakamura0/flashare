@@ -38,7 +38,7 @@ ja:
       not_updated: "%{item}を更新出来ませんでした"
       deleted: "%{item}を削除しました"
       require_login: ログインしてください
-      not_authorized: 権限がありません
+      already_login: ログイン済みです
       added: "%{item}を追加しました"
       delete_from_deck: デッキからカードを削除しました
       reserve_deck_question: デッキを出題予約しました

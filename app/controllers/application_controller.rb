@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
   def require_login
     redirect_to login_path, alert: t("defaults.flash_message.require_login") unless logged_in?
   end
+
+  def redirect_after_login
+    redirect_to root_path, alert: t("defaults.flash_message.already_login") if logged_in?
+  end
 end

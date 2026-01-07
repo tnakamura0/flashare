@@ -46,14 +46,31 @@ ja:
       no_cards: デッキにカードがありません
     link:
       to_index_card_page: カード一覧
-      to_index_deck_page: デッキ一覧
       to_add_card_page: カード追加
   static_pages:
     home:
       title: Flashare
-      info: フラッシュカードを作ってシェアしよう
+      info: フラッシュカードを作ってシェアしよう。
       how_to_use:
         title: 使い方
+        step1:
+          title: ユーザー登録・ログイン
+          content: まずはユーザー登録をしよう。
+        step2:
+          title: カード作成
+          content: 名前と意味がセットのカードを作成しよう。
+        step3:
+          title: デッキ作成
+          content: デッキを作成してデッキ詳細ページからカードを追加しよう。
+        step4:
+          title: 公開デッキを見る
+          content: 他のユーザーが公開したデッキを公開デッキページで見てみよう。
+        step5:
+          title: 出題予約
+          content: デッキ詳細ページや他ユーザーの公開デッキから出題予約しよう。
+        step6:
+          title: クイズを解く
+          content: クイズページから問題を解こう。出題予約したデッキ内からランダムに出題！
   user_sessions:
     new:
       title: ログイン
@@ -100,7 +117,10 @@ ja:
       title: デッキ編集
   deck_cards:
     index:
-      title: デッキ管理
+      title: カード追加
+      created_cards: 作成済みカード
+      link_to_deck: "%{deck_name}"
+      add_cards: に追加する
       add: 追加
   public_decks:
     index:
@@ -113,7 +133,7 @@ ja:
     show:
       title: 結果発表
       result: 全%{total_questions}問中%{correct_number}問正解しました。
-      to_index_question_page: 問題一覧へ
+      retry: 再度出題予約
     question:
       title: クイズ
       quiz_number: 第%{number}問

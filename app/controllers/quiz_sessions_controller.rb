@@ -65,6 +65,7 @@ class QuizSessionsController < ApplicationController
     # 最後の回答が送信された後に表示される結果ページ
     @quiz_session = current_user.quiz_sessions.find(params[:id])
     @answers = @quiz_session.answers
+    @incorrect_answers = @answers.where(correct: false)
     @correct_number = @answers.where(correct: true).count
   end
 

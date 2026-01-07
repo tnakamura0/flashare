@@ -117,6 +117,6 @@ ja:
     question:
       title: クイズ
       quiz_number: 第%{number}問
-      show_answer: 解答を表示する
+      show_answer: 解答を表示
       correct: 正解
       incorrect: 不正解

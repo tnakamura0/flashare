@@ -1,6 +1,8 @@
 <% content_for(:title, t(".title")) %>
 <div class="mt-24 mb-18 md:mb-8 px-2 md:px-10 py-4 md:py-8 rounded-2xl md:rounded-3xl bg-violet-50">
-  <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl mb-2 text-center"><%= t(".title") %></h1>
+  <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4 text-center">
+    <span class="border-b-2"><%= t(".title") %></span>
+  </h1>
   <% if @cards.present? %>
     <div class="text-center">
       <%= link_to new_card_path, class: "text-indigo-500 text-xl md:text-2xl font-bold border-b-1 border-dashed" do %>

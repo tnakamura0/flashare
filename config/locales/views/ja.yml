@@ -53,7 +53,7 @@ ja:
       title: Flashare
       info: フラッシュカードを作ってシェアしよう。
       how_to_use:
-        title: 使い方
+        title: 利用方法
         step1:
           title: ユーザー登録・ログイン
           content_html: まずは%{signup}をしよう。
@@ -129,12 +129,18 @@ ja:
       to_my_decks_page: マイデッキ
   quiz_sessions:
     index:
-      title: 問題一覧
+      title: クイズ一覧
       no_question_message: デッキを問題に追加しましょう！
     show:
       title: 結果発表
       result: 全%{total_questions}問中%{correct_number}問正解しました。
       retry: 再度出題予約
+      result_detail: 結果詳細
+      card_name: カード名
+      correctness: 正誤
+      correct: ⚪︎
+      incorrect: ×
+      incorrect_cards: 間違えたカード
     question:
       title: クイズ
       quiz_number: 第%{number}問

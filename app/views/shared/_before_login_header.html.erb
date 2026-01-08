@@ -1,6 +1,8 @@
 <header class="flex justify-between fixed top-0 right-0 w-full p-4 text-lime-50 bg-linear-to-r from-blue-500/90 to-violet-500/90">
-  <h1 class="text-3xl">
-    <%= link_to "Flashare", root_path %>
+  <h1 class="text-2xl">
+    <%= link_to root_path do %>
+      <%= image_tag "/assets/icon.png", size: '28x28', class: "inline-block" %> <span>Flashare</span>
+    <% end %>
   </h1>
   <ul class="flex items-center gap-4">
     <li>

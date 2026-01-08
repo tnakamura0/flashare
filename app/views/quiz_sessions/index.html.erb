@@ -3,13 +3,13 @@
   <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-center">
     <span class="border-b-2"><%= t(".title") %></span>
   </h1>
+  <div class="font-bold text-xl md:text-2xl mb-4 md:text-center">
+    <i class="fa-solid fa-square-plus"></i>
+    <%= t(".add_decks_html", my_decks: link_to(t("defaults.my_decks"), decks_path, class: "text-indigo-500 border-b border-dashed"), public_decks: link_to(t("defaults.public_decks"), public_decks_path, class: "text-indigo-500 border-b border-dashed") ) %>
+  </div>
   <% if @quiz_sessions.exists? %>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
       <%= render @quiz_sessions %>
-    </div>
-  <% else %>
-    <div class="text-center">
-      <%= link_to t(".no_question_message"), decks_path, class: "text-indigo-400 text-xl md:text-2xl border-b-1 border-dashed" %>
     </div>
   <% end %>
 </div>

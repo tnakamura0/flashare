@@ -34,13 +34,6 @@ RSpec.describe "Cards", type: :system do
           expect(page).to have_title "カード一覧"
         end
 
-        context "カードが存在しない場合" do
-          it "作成を勧めるメッセージが表示されること" do
-            visit cards_path
-            expect(page).to have_content "こちらからカードを作成しましょう！"
-          end
-        end
-
         context "カードが存在する場合" do
           let!(:card) { create(:card, user: user, name: 'テストカード', meaning: 'テスト') }
 

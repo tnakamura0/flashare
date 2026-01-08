@@ -94,7 +94,6 @@ ja:
     index:
       title: カード一覧
       to_create_card_page: カードを新規作成
-      no_card_message: こちらからカードを作成しましょう！
     new:
       title: カード作成
     show:
@@ -120,6 +119,7 @@ ja:
     index:
       title: カード追加
       created_cards: 作成済みカード
+      no_cards: カードが残っていません
       link_to_deck: "%{deck_name}"
       add_cards: に追加する
       add: 追加
@@ -130,7 +130,7 @@ ja:
   quiz_sessions:
     index:
       title: クイズ一覧
-      no_question_message: デッキを問題に追加しましょう！
+      add_decks_html: "%{my_decks}か%{public_decks}から追加"
     show:
       title: 結果発表
       result: 全%{total_questions}問中%{correct_number}問正解しました。

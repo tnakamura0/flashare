@@ -1,24 +1,40 @@
-# README
+# Flashare
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービスURL
+https://flashare.onrender.com
 
-Things you may want to cover:
+## サービス概要
+Flashareはカードを作成・シェアして解答できるフラッシュカードアプリです。
 
-* Ruby version
+## サービスコンセプト
+今回は学習の振り返り・アプトプットを主目的として開発しました。RUNTEQに入学後のRuby on Railsの学習経験をもとに、何かしらのアプリを作りたいと考えました。そこで以前から興味があり、また基本的なCRUD操作に加えてRESTfulではないリソースの扱いも必要となる、フラッシュカードアプリの開発を決めました。
 
-* System dependencies
+自己完結したアプリだと面白みがないので、作成したデッキを公開できるようにして、他のユーザーのデッキも遊べるようにしました。
 
-* Configuration
+## 使用技術
 
-* Database creation
+| 項目 | 技術 |
+| ---- | ---- |
+| プログラミング言語 | Ruby 3.4.7 |
+| フレームワーク | Ruby on Rails 7.2.3 |
+| CSSフレームワーク | Tailwind CSS v4 |
+| JavaScriptフレームワーク | Stimulus |
+| PaaS（Webサーバー） | Render |
+| データベース | Neon (PostgreSQL) |
 
-* Database initialization
+## 実装を予定している機能
+* Remember me
+* 文字列検索
+* フィルター、ソート
+* ページネーション
+* お気に入り機能
+* ユーザー情報確認、編集、削除
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発を通して得た学び
+* ページのコンテナやプライマリーボタンなど使い回すものは先にTailwind CSSで定義しておくといい
+  * DRY
+  * 同じ内容を何度も別ファイルに記述することで保守性が低下してしまった
+* テストについて
+  * 開発が進むにつれて手動で挙動が正しいか確認する負担が大きくなる
+  * 開発前半部分ではでテストを書いていたことにより、後々コード更新時に追加で修正しないといけない箇所を簡単に気づけた
+  * 一方で、テストを書くこと自体の労力と天秤に掛けて、本当に必要なテストなのかを考える必要性を感じた

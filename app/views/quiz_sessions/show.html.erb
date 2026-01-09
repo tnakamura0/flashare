@@ -13,7 +13,9 @@
     <h2 class="font-bold text-2xl text-center"><%= t(".result_detail") %></h2>
     <div class="mt-2">
       <div class="text-center">
-        <i class="fa-solid fa-user"></i> <%= @quiz_session.deck.user.name %>
+        <span class="border-b">
+          <i class="fa-solid fa-user"></i> <%= @quiz_session.deck.user.name %>
+        </span>
         <div class="font-bold">
           <%= @quiz_session.deck.name %>
         </div>
@@ -30,11 +32,17 @@
           </div>
         <% end %>
     </div>
-    <h3 class="font-bold text-lg mt-4"><%= t(".incorrect_cards") %></h3>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-      <% @incorrect_answers.each do |incorrect_answer| %>
-        <%= render "incorrect_answer", incorrect_answer: incorrect_answer %>
-      <% end %>
-    </div>
+    <h3 class="font-bold text-lg mt-4 text-center"><%= t(".incorrect_cards") %></h3>
+    <% if @incorrect_answers.exists? %>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <% @incorrect_answers.each do |incorrect_answer| %>
+          <%= render "incorrect_answer", incorrect_answer: incorrect_answer %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="text-lime-600 text-center">
+        <i class="fa-solid fa-circle-check"></i> <%= t(".all_correct_message") %>
+      </div>
+    <% end %>
   </div>
 </div>

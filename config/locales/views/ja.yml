@@ -141,6 +141,7 @@ ja:
       correct: ⚪︎
       incorrect: ×
       incorrect_cards: 間違えたカード
+      all_correct_message: 全問正解しました
     question:
       title: クイズ
       quiz_number: 第%{number}問

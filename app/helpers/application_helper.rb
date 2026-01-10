@@ -2,7 +2,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: "Flashare",
-      title: "フラッシュカードを作成してシェアできるサービス",
+      title: "Flashare | フラッシュカードを作成してシェアできるサービス",
       reverse: true,
       charset: "utf-8",
       description: "Flashareはカードを作成・解答して、作成したデッキを任意で公開できるフラッシュカードアプリです。",

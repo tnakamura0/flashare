@@ -1,5 +1,5 @@
 <% content_for(:title, t(".title")) %>
-<div class="w-full md:w-5/6 lg:w-2/3 mx-auto mt-24 mb-18 md:mb-8 px-2 md:px-10 py-6 rounded-4xl bg-violet-50">
+<div class="w-full lg:w-2/3 mx-auto mt-24 mb-18 md:mb-8 px-2 md:px-10 py-6 rounded-4xl bg-violet-50">
   <div class="flex justify-between items-center mb-3">
     <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
     <%= button_to quiz_sessions_path(deck_id: @deck.id), { method: :post, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 border border-indigo-600 rounded px-4 py-2" } do %>
@@ -9,7 +9,7 @@
   <%= render 'decks/deck', deck: @deck, deck_page: "show" %>
   <div class="font-bold text-lg mt-4 mb-2"><%= t(".added_cards") %></div>
   <% if @deck.cards.exists? %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
       <% @deck.cards.each do |card| %>
         <%= render 'decks/deck_cards', deck: @deck, card: card %>
       <% end %>

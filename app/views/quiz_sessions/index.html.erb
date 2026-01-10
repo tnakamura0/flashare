@@ -8,7 +8,7 @@
     <%= t(".add_decks_html", my_decks: link_to(t("defaults.my_decks"), decks_path, class: "text-indigo-500 border-b border-dashed"), public_decks: link_to(t("defaults.public_decks"), public_decks_path, class: "text-indigo-500 border-b border-dashed") ) %>
   </div>
   <% if @quiz_sessions.exists? %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
       <%= render @quiz_sessions %>
     </div>
   <% end %>

@@ -130,7 +130,7 @@ ja:
   quiz_sessions:
     index:
       title: クイズ一覧
-      add_decks_html: "%{my_decks}か%{public_decks}から追加"
+      add_decks_html: "%{my_decks}、%{public_decks}から追加"
     show:
       title: 結果発表
       result: 全%{total_questions}問中%{correct_number}問正解しました。

@@ -31,3 +31,7 @@
 .red-button {
   @apply text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded
 }
+
+.blue-button {
+  @apply text-white bg-linear-to-r from-cyan-600 to-blue-600 ring ring-blue-700 hover:opacity-70 rounded
+}

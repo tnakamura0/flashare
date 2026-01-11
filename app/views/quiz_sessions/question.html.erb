@@ -9,7 +9,7 @@
     <p class="font-medium text-2xl md:text-3xl border-b">
       <span class="animate-fade-in"><%= @random_card.name %></span>
     </p>
-    <button class="text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-2 py-1" data-answer-target="showAnswer" data-action="click->answer#switchButton"><i class="fa-regular fa-eye"></i> <%= t(".show_answer") %></button>
+    <button class="primary-button px-2 py-1" data-answer-target="showAnswer" data-action="click->answer#switchButton"><i class="fa-regular fa-eye"></i> <%= t(".show_answer") %></button>
     <div class="hidden flex flex-col items-center" data-answer-target="answerButton">
       <div class="text-indigo-500">
         <i class="fa-solid fa-circle-check"></i><%= @random_card.meaning %>

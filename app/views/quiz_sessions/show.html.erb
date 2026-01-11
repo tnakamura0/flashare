@@ -4,7 +4,7 @@
     <h1 class="font-bold text-3xl md:text-4xl">
       <i class="fa-solid fa-bullhorn"></i><%= t(".title") %>
     </h1>
-    <%= button_to quiz_sessions_path(deck_id: @quiz_session.deck.id), { method: :post, class: "text-center text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 border border-indigo-600 rounded px-2 md:px-4 py-2" } do %>
+    <%= button_to quiz_sessions_path(deck_id: @quiz_session.deck.id), { method: :post, class: "text-center primary-button px-2 md:px-4 py-2" } do %>
       <i class="fa-solid fa-folder-plus"></i> <%= t(".retry") %>
     <% end %>
   </div>

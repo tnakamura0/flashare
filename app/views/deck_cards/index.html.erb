@@ -4,7 +4,7 @@
     <span class="border-b-2"><%= t(".title") %></span>
   </h1>
   <div class="font-bold text-xl md:text-2xl text-indigo-500 mt-2 md:mt-4 text-center">
-    <%= link_to t(".link_to_deck", deck_name: @deck.name), deck_path(@deck), class: " border-b border-dashed" %>
+    <%= link_to t(".link_to_deck", deck_name: @deck.name), deck_path(@deck), class: "border-b border-dashed" %>
     <%= t(".add_cards") %>
   </div>
   <% if @cards.exists? %>
@@ -14,7 +14,7 @@
         <p class="font-bold"><%= card.name %></p>
         <p class="mt-1"><%= card.meaning %></p>
         <div class="mt-auto text-right">
-          <%= button_to deck_deck_cards_path(@deck, card_id: card.id), method: :post, class: "text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 disabled:bg-gray-400 rounded px-3 py-1" do %>
+          <%= button_to deck_deck_cards_path(@deck, card_id: card.id), method: :post, class: "primary-button px-3 py-1" do %>
             <i class="fa-solid fa-circle-plus"></i> <%= t(".add") %>
           <% end %>
         </div>

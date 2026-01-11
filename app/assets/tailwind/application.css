@@ -27,3 +27,7 @@
 .green-button {
   @apply text-white bg-linear-to-r from-lime-600 to-teal-600 ring ring-emerald-700 hover:opacity-70 rounded
 }
+
+.red-button {
+  @apply text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded
+}

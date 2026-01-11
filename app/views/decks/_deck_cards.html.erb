@@ -2,7 +2,7 @@
   <p class="font-bold"><%= card.name %></p>
   <p class="mt-1"><%= card.meaning %></p>
   <div class="mt-auto text-right">
-    <%= button_to deck_deck_card_path(deck, deck.deck_cards.find_by(card_id: card.id)), class: "text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded px-1 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } do %>
+    <%= button_to deck_deck_card_path(deck, deck.deck_cards.find_by(card_id: card.id)), class: "red-button px-1 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } do %>
       <i class="fa-solid fa-circle-minus"></i> <%= t("defaults.delete_from_deck") %>
     <% end %>
   </div>

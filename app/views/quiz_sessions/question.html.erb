@@ -18,7 +18,7 @@
         <%= button_to answer_quiz_session_path(@quiz_session), { class: "green-button px-4 py-1", method: :post, params: { correct: true, card_id: @random_card.id } } do %>
           <i class="fa-regular fa-face-smile-beam"></i> <%= t(".correct") %>
         <% end %>
-        <%= button_to answer_quiz_session_path(@quiz_session), { class: "text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-800 hover:opacity-70 rounded px-2 py-1", method: :post, params: { correct: false, card_id: @random_card.id } } do %>
+        <%= button_to answer_quiz_session_path(@quiz_session), { class: "red-button px-2 py-1", method: :post, params: { correct: false, card_id: @random_card.id } } do %>
           <i class="fa-regular fa-face-dizzy"></i> <%= t(".incorrect") %>
         <% end %>
       </div>

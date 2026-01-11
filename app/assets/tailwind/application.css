@@ -23,3 +23,7 @@
 .primary-button {
   @apply text-lime-50 bg-linear-to-r from-blue-500 to-violet-500 hover:opacity-70 border border-indigo-600 rounded
 }
+
+.green-button {
+  @apply text-white bg-linear-to-r from-lime-600 to-teal-600 ring ring-emerald-700 hover:opacity-70 rounded
+}

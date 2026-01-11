@@ -17,7 +17,7 @@
           <i class="fa-solid fa-eye"></i> <%= t("defaults.show") %>
         <% end %>
       <% end %>
-      <%= link_to edit_deck_path(deck), class: "text-white bg-linear-to-r from-lime-600 to-teal-600 ring ring-emerald-700 hover:opacity-70 rounded px-1 md:px-2 py-0.5" do %>
+      <%= link_to edit_deck_path(deck), class: "green-button px-1 md:px-2 py-0.5" do %>
         <i class="fa-solid fa-file-pen"></i> <%= t("defaults.edit") %>
       <% end %>
       <%= button_to deck_path(deck), class: "text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded px-1 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t("defaults.delete_confirm") } do %>

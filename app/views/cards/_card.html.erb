@@ -2,7 +2,7 @@
   <p class="font-bold"><%= card.name %></p>
   <p class="mt-1"><%= card.meaning %></p>
   <div class="mt-auto flex justify-end items-center gap-2">
-    <%= link_to  edit_card_path(card), class: "text-white bg-linear-to-r from-lime-600 to-teal-600 ring ring-emerald-700 hover:opacity-70 rounded px-1 md:px-2 py-0.5" do %>
+    <%= link_to  edit_card_path(card), class: "green-button px-1 md:px-2 py-0.5" do %>
       <i class="fa-solid fa-pen"></i> <%= t("defaults.edit") %>
     <% end %>
     <%= button_to card_path(card), class: "text-white bg-linear-to-r from-red-600 to-pink-600 ring ring-pink-700 hover:opacity-70 rounded px-1 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t('defaults.delete_confirm') } do %>

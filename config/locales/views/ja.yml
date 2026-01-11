@@ -127,6 +127,7 @@ ja:
     index:
       title: 公開デッキ
       to_my_decks_page: マイデッキ
+      info: 他ユーザーの公開デッキ一覧
   quiz_sessions:
     index:
       title: クイズ一覧

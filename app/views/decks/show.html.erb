@@ -1,5 +1,5 @@
 <% set_meta_tags title: t(".title") %>
-<div class="w-full lg:w-2/3 mx-auto mt-24 mb-18 md:mb-8 px-2 md:px-10 py-6 rounded-4xl bg-violet-50">
+<div class="page-container w-full lg:w-2/3 mx-auto mt-24 mb-18 md:mb-8 px-2 md:px-10 py-6">
   <div class="flex justify-between items-center mb-3">
     <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
     <%= button_to quiz_sessions_path(deck_id: @deck.id), { method: :post, class: "primary-button px-4 py-2" } do %>

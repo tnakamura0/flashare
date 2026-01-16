@@ -3,7 +3,7 @@
   <div class="flex justify-between items-center mb-3">
     <h1 class="font-bold text-xl md:text-2xl lg:text-3xl"><%= t(".title") %></h1>
     <%= button_to quiz_sessions_path(deck_id: @deck.id), { method: :post, class: "primary-button px-4 py-2" } do %>
-      <i class="fa-solid fa-folder-plus"></i> <%= t(".question_reservation") %>
+      <i class="fa-solid fa-folder-plus"></i> <%= t("defaults.question_reservation") %>
     <% end %>
   </div>
   <%= render 'decks/deck', deck: @deck, deck_page: "show" %>

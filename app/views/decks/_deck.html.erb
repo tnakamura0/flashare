@@ -7,20 +7,23 @@
     <% else %>
       <i class="fa-solid fa-lock"></i>
     <% end %>
-    <div class="mt-auto flex justify-end items-center gap-2">
+    <div class="mt-auto flex justify-end items-center gap-1 md:gap-2">
       <% if deck_page == "show" %>
         <%= link_to deck_deck_cards_path(deck), class: "blue-button px-1 md:px-2 py-0.5" do %>
           <i class="fa-solid fa-circle-plus"></i> <%= t("defaults.link.to_add_card_page") %>
         <% end %>
       <% else%>
-        <%= link_to deck_path(deck), class: "blue-button px-1 md:px-2 py-0.5" do %>
+        <%= button_to quiz_sessions_path(deck_id: deck.id), { method: :post, class: "primary-button px-0.5 md:px-2 py-0.5" } do %>
+          <i class="fa-solid fa-folder-plus"></i> <%= t("defaults.question_reservation") %>
+        <% end %>
+        <%= link_to deck_path(deck), class: "blue-button px-0.5 md:px-2 py-0.5" do %>
           <i class="fa-solid fa-eye"></i> <%= t("defaults.show") %>
         <% end %>
       <% end %>
-      <%= link_to edit_deck_path(deck), class: "green-button px-1 md:px-2 py-0.5" do %>
+      <%= link_to edit_deck_path(deck), class: "green-button px-0.5 md:px-2 py-0.5" do %>
         <i class="fa-solid fa-file-pen"></i> <%= t("defaults.edit") %>
       <% end %>
-      <%= button_to deck_path(deck), class: "red-button px-1 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t("defaults.delete_confirm") } do %>
+      <%= button_to deck_path(deck), class: "red-button px-0.5 md:px-2 py-0.5", method: :delete, data: { turbo_confirm: t("defaults.delete_confirm") } do %>
         <i class="fa-solid fa-trash-can"></i> <%= t("defaults.delete") %>
       <% end %>
     </div>

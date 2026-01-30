@@ -112,7 +112,6 @@ ja:
       title: デッキ詳細
       added_cards: 追加済みのカード
       no_cards: カードが追加されていません
-      question_reservation: 出題予約
     edit:
       title: デッキ編集
   deck_cards:
